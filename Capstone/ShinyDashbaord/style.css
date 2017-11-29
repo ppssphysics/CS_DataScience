@@ -1,0 +1,61 @@
+
+a {
+    color: #4A4D4D;
+}
+
+a:hover {
+    color: #4A4D4D;
+}
+
+a:active {
+    color: #4A4D4D;
+}
+
+a:visited {
+    color: #4A4D4D;
+}
+
+modal-body {
+    font-size: 10px;
+}
+
+h2 {
+    color: #535757;
+    line-height: 1.1;
+}
+
+
+body {
+  background-color: #262626;
+  border-color: #262626;
+  color: #4A4D4D;
+  font-family: 'Lucida Sans Unicode','Lucida Grande';
+  font-size: 12px;
+  white-space: normal;
+}
+
+#hover{
+  font-size: 11px;
+  color: #F2F2F2;
+}
+
+#userinput{
+	margin-left: 15px;
+}
+
+#textintro, #textpedag{
+	color: #535757;
+ font-size: 18px;
+ margin-right:30%;
+}
+
+#wordpredict{
+	color: white;
+ font-size: 18px;
+ margin-right:30%;
+}
+
+#ngramtable{
+	margin-right:30%;
+}
+

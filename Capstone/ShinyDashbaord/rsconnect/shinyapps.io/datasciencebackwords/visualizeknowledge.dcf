@@ -1,0 +1,12 @@
+name: visualizeknowledge
+title: visualizeknowledge
+username:
+account: datasciencebackwords
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 214568
+bundleId: 981381
+url: https://datasciencebackwords.shinyapps.io/visualizeknowledge/
+when: 1505384257.2088
+asMultiple: FALSE
+asStatic: FALSE

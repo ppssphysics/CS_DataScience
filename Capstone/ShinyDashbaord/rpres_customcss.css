@@ -1,0 +1,41 @@
+
+.section .reveal .state-background {
+    background: #F2F2F2;
+    }
+    
+.section .reveal p {
+    color: black;
+    position: relative;
+    font-size:30px;
+}
+
+.section .reveal h1 {
+    color: black;
+    position: relative;
+    top: 4%;
+    font-size:60px;
+}
+
+.reveal h3 { 
+  font-size: 50px;
+  color: blue;
+}
+
+
+.reveal p {
+    color: black;
+    position: relative;
+    font-size:30px;
+}
+
+.specialsubtype {
+  
+  color: black;
+  font-size:10px;
+  
+}
+
+.specialitems {
+  color: green;
+  font-size:10px;
+}

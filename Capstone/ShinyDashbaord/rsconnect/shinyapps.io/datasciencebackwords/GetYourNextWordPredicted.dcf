@@ -1,0 +1,12 @@
+name: GetYourNextWordPredicted
+title: GetYourNextWordPredicted
+username:
+account: datasciencebackwords
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 240515
+bundleId: 1103365
+url: https://datasciencebackwords.shinyapps.io/GetYourNextWordPredicted/
+when: 1511938287.7055
+asMultiple: FALSE
+asStatic: FALSE

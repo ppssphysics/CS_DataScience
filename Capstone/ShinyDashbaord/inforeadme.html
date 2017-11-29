@@ -1,0 +1,44 @@
+
+
+<b>#GetYourNextWordPredicted</b> is an interactive dashboard that predicts the next most probable word a user intends to write. The ultimate goal of such a prototype application would be to provide an interface to speed up the writing of messages on smart phones, as an example. In fact, such an apllication already exists on Android phones with the SwiftKey application.
+
+<br>
+<br><b>Background</b><br>
+This application is built as part of the capstone project of the Cousera Data Science Specialisation taught by the John Hopkins University, Bloomberg School of Public Health. The capstone project is provided to students in a collaboration effort with SwiftKey.
+<br>
+
+<br>
+<br><b>Data and Working Principle</b><br>
+The predictive algorithm is based on frequency tables (i.e. probabaility tables) of most probable combinations of words, so-called ngrams, derived from large corpus of texts. A unigram represents the frequency table of unique words where we typically see stop words like <i>the</i> or <i>that</i> come on top of the frequency table. A bigram represents the most feequent combinations of two words, etc. For this application, we calculate and store multigrams up to the fifth order.
+<br><br>
+The corpus of text we use to derive our ngrams are based on 3 different types of text sources: news articles, blog articles and twitter posts. Only a small subsample of the provided corpus is used to build our ngrams, mainly due to limitations in computing power. More information on the process of building the ngrams can be found <b><a href="http://rpubs.com/ppss85/324013" > here </a></b>.
+<br><br>
+
+<br>
+<br><b>Web Application</b><br>
+Based on a user's text input, the prediction works as follows:
+<br>
+<ul style="text-align: center,list-style-position: inside">
+<li>The input is run through a text cleaning process (removing punctuation, numbers, etc.) </li>
+<li>Reactively, the letters and or words are searched accross all available ngrams</li> 
+<li>The search starts across 5grams all the way down to unigrams and creates a probability table for each combination of words returned based on the frequency of the combination in the corresponding ngram (subsetted to all potential matches)</li>
+<li> A matching score is calculated by using the above probability, the frequency of a given prediction (a given word) and the number of words from the input that are matched exactly in a given combination</li>
+<li>The most probable combination, based on the matching score, is used to return the next most probable word to the user</li>
+<li>If the matching score is 0, the most probable word in the unigram table is returned.</li>
+</ul>
+
+While this process of searching the ngrams takes place, the application proposes to see what is happening live by displaying the aggregated frequency tables with the matching scores as text is added or modified.
+
+<br>
+<br><b>Future Improvements</b>
+This is only a prototype in the form of a working example. A susbtantial improvement is needed to improve the ngram tables that at this time lack completeness and therefore are not sufficiently representative of all most probable combinations. Also, a more standard prediction probability calculation following the Katz's Backoff model. Finally, we can imagine that in a real use case scenario, the prediction algorithm could learn to better predict based on the success rates, which would be user dependent. 
+
+
+<br>
+<br><b>References</b><br>
+The code used to create the shiny application is available on <b><a href="https://github.com/ppssphysics" > GitHub </a></b>.
+
+
+<br>
+<br><b>Credits</b><br>
+I want to aknowledge the work of Stephan Schlögl who created a great visualisation product based on Shiny and javascript librairies. His change visualisation dashboard, openly available on <b><a href="https://github.com/supersambo/visualizeChange>" > GitHub </a></b> has been a source of inspiration for building this dashboard and other products in the past year. One other very useful blog post that has helped me better understand how to use the ngrams in the in my prediction algorithm according to the so-called Katz's Backoff <b><a href="https://thachtranerc.wordpress.com/2016/04/12/katzs-backoff-model-implementation-in-r/" > here </a></b>.
